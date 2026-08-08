@@ -23,9 +23,7 @@ jobs:
       - name: Configurar CMake
         shell: powershell
         run: |
-          mkdir build
-          cd build
-          cmake .. -G "Visual Studio 17 2022" -A x64 -DYUZU_USE_BUNDLED_VULKAN=ON
+          cmake -S . -B build -G "Visual Studio 17 2022" -A x64 -DYUZU_USE_BUNDLED_VULKAN=ON
 
       - name: Compilar
         shell: powershell
